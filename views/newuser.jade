@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+    form#formAddUser(name="adduser",method="post",action="/adduser", accept="image/gif, image/jpeg",enctype="multipart/form-data")
+        div(class="divStyle")
+            h1= title
+            input#inputUserName(type="text", placeholder="username", name="username")
+            input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+            br
+            br
+            input#inputstoreImage(type="file",placeholder="storeimage" name="image")
+            br
+            br
+            button#btnSubmit(type="submit") submit

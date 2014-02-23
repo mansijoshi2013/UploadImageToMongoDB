@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    form#gotoUserList(name="gotoUserList",method="get",action="/userlist")
+        div(class="divStyle")
+            h1= title
+            p Hello World!! Welcome to #{title}
+
+
+            button#btnSubmit(type="submit") User List
+
+   

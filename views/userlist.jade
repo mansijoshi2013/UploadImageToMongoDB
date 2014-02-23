@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    h1.
+        User List
+    table
+        th.
+            User Name
+        th.
+            Email
+        th.
+            Image
+
+        each user, i in userlist
+            tr
+
+                td(class="feature")
+                    a= user.username
+                td(class="feature")
+                    a(href="mailto={user.email}")= user.email
+
+                td(class="feature")
+                    img(src="/images/#{user.uploadedfilename}")
+    br
+
+    form#redirecttoNewUser(name="newuser",action="/newuser")
+        button#btnSubmit(type="submit") Add User
+
